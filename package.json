@@ -1,7 +1,7 @@
 {
   "name": "node-mongodb-crud",
   "version": "1.0.0",
-  "description": "",
+  "description": "![](docs/screenshot.png)",
   "main": "index.js",
   "dependencies": {
     "ejs": "^2.5.9",
@@ -18,5 +18,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mordonez86/appmorph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mordonez86/appmorph/issues"
+  },
+  "homepage": "https://github.com/mordonez86/appmorph#readme"
 }

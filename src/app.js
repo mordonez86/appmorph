@@ -2,11 +2,14 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const app = express();
 
+
+
 // connection to db
-mongoose.connect('mongodb://192.168.0.24/crud')
+mongoose.connect('mongodb://192.168.0.40/crud',{useNewUrlParser: true,useUnifiedTopology: true})
   .then(db => console.log('db connected'))
   .catch(err => console.log(err));
 
@@ -20,7 +23,9 @@ app.set('view engine', 'ejs');
 
 // middlewares
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 // routes
 app.use('/', indexRoutes);
 
